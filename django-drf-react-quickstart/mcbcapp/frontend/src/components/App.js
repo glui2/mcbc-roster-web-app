@@ -4,7 +4,7 @@ import DataProvider from "./DataProvider";
 import Table from "./Table";
 const App = () => (
   <DataProvider
-    endpoint="api/volunteer/"
+    endpoint="api/rostering/"
     render={data => <Table data={data} />}
   />
 );
