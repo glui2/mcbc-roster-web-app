@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import DataProvider from "../components/DataProvider";
-import Header from "../components/Header";
+import DataProvider from "./DataProvider";
+import Header from "./Header";
 
 const App = () => (
   <Header></Header>

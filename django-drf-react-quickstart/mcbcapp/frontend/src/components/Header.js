@@ -13,10 +13,14 @@ import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import MailIcon from "@material-ui/icons/Mail";
+import { Icon } from "@material-ui/core";
+// import AvailabilitiesIcon from "../../public/assets/icons/AvailabilitiesIcon.png";
+// import HomeIcon from "../../public/assets/icons/HomeIcon.png";
+// import MembersIcon from "../../public/assets/icons/MembersIcon.png";
+// import MonthlyRosterIcon from "../../public/assets/icons/MonthlyRosterIcon.png";
+// import ProfileIcon from "../../public/assets/icons/ProfileIcon.png";
 
-const drawerWidth = 240;
+const drawerWidth = 250;
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -96,7 +100,8 @@ export default function Header() {
         style={{
           boxShadow: "none",
           padding: "0px",
-          backgroundColor: "primary"
+          backgroundColor: "#FFFFFF",
+          color: "#E53232"
         }}
       >
         <Toolbar>
@@ -136,17 +141,41 @@ export default function Header() {
         </div>
         <List>
           {[
-            "Home",
-            "Profile",
-            "Availabilities",
-            "Monthly Roster",
-            "Members"
-          ].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
+            {
+              label: "Home",
+              icon: "/static/public/assets/icons/HomeIcon.png"
+            },
+            {
+              label: "Profile",
+              icon: "/static/public/assets/icons/ProfileIcon.png"
+            },
+            {
+              label: "Availabilities",
+              icon: "/static/public/assets/icons/AvailabilitiesIcon.png"
+            },
+            {
+              label: "Monthly Roster",
+              icon: "/static/public/assets/icons/MonthlyRosterIcon.png"
+            },
+            {
+              label: "Members",
+              icon: "/static/public/assets/icons/MembersIcon.png"
+            }
+          ].map((button, index) => (
+            <ListItem
+              button
+              key={button.label}
+              style={{
+                border: "solid",
+                borderColor: "#E53232",
+                borderRadius: "100px",
+                borderWidth: "2px",
+                color: "#E53232",
+                margin: "3%"
+              }}
+            >
+              <img src={button.icon} />
+              <ListItemText primary={button.label} />
             </ListItem>
           ))}
         </List>
