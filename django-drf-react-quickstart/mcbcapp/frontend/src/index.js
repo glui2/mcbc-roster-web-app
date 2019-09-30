@@ -4,12 +4,6 @@ import App from "./components/App";
 import WebFont from "webfontloader";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core";
 
-WebFont.load({
-  google: {
-    families: ["Archivo Narrow", "sans-serif"]
-  }
-});
-
 const mcbcTheme = createMuiTheme({
   palette: {
     primary: {
@@ -18,6 +12,9 @@ const mcbcTheme = createMuiTheme({
     secondary: {
       main: "#32669D"
     }
+  },
+  typography: {
+    fontFamily: "Archivo Narrow, Roboto, sans-serif"
   }
 });
 

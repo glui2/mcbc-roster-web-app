@@ -141,23 +141,23 @@ export default function Header() {
         >
           {[
             {
-              label: "Home",
+              label: "HOME",
               icon: "/static/assets/icons/HomeIcon.png"
             },
             {
-              label: "Profile",
+              label: "PROFILE",
               icon: "/static/assets/icons/ProfileIcon.png"
             },
             {
-              label: "Availabilities",
+              label: "AVAILABILITIES",
               icon: "/static/assets/icons/AvailabilitiesIcon.png"
             },
             {
-              label: "Monthly Roster",
+              label: "MONTHLY ROSTER",
               icon: "/static/assets/icons/MonthlyRosterIcon.png"
             },
             {
-              label: "Members",
+              label: "MEMBERS",
               icon: "/static/assets/icons/MembersIcon.png"
             }
           ].map((button, index) => (
