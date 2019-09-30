@@ -13,23 +13,29 @@ class IntroPage extends Component{
                 height: "1080px"
             };
             const nameStyle1 = {
-                color: "white", 
+                color: "white",
+                width: "390px",
+                height: "100.8",
                 fontSize:"50px",  
                 position: "center" 
+                
             };
             const nameStyle2 = {
                 color: "white", 
+                width:"281px",
+                height:"62.9px",
                 fontSize:"20px",  
-                position: "center" 
+                position: "center"
             };
 
             return(
-                <body style={backgroundStyle}>
+    
+            <body style={backgroundStyle}>
                 
                 <center>
                     <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
 
-                    <img src={"/static/assets/icons/logo.png"} alt = "app logo" width="200" height="100" />
+                    <img src={"/static/assets/icons/logo.png"} alt = "app logo" width="182" height="220" />
                     <h1 style = {nameStyle1}> <br></br>
                         CROSSGEN 
                     </h1>
