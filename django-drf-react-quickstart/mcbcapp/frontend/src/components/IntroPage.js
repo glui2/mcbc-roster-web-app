@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 //import logo from "../assets/icons/logo.png";
 
-console.log(logo);
+//console.log(logo);
 
 class IntroPage extends Component{ 
     render(){
-        
+               
             const backgroundStyle = {
                 backgroundColor: "#32669d", 
                 width: "1919.9px", 
@@ -22,11 +22,14 @@ class IntroPage extends Component{
                 fontSize:"20px",  
                 position: "center" 
             };
+
             return(
-            <body style={backgroundStyle}>
+                <body style={backgroundStyle}>
                 
                 <center>
-                    <img src={"../assets/icons/logo.png"} alt = "app logo" />
+                    <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+
+                    <img src={"/static/assets/icons/logo.png"} alt = "app logo" width="200" height="100" />
                     <h1 style = {nameStyle1}> <br></br>
                         CROSSGEN 
                     </h1>
@@ -34,9 +37,12 @@ class IntroPage extends Component{
                         ROSTER
                     </h2>                                      
                 </center>
-                </body>
-        );     
+            </body>
+        );  
+        
+        
     }
+
 }
 
 export default IntroPage;
