@@ -26,7 +26,7 @@ class IntroPage extends Component{
             <body style={backgroundStyle}>
                 
                 <center>
-                    
+                    <img src={"../assets/icons/logo.png"} alt = "app logo" />
                     <h1 style = {nameStyle1}> <br></br>
                         CROSSGEN 
                     </h1>
