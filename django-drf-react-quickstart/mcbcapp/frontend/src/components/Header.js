@@ -10,17 +10,12 @@ import Drawer from "@material-ui/core/Drawer";
 import List from "@material-ui/core/List";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
-import { Icon } from "@material-ui/core";
-// import AvailabilitiesIcon from "../../public/assets/icons/AvailabilitiesIcon.png";
-// import HomeIcon from "../../public/assets/icons/HomeIcon.png";
-// import MembersIcon from "../../public/assets/icons/MembersIcon.png";
-// import MonthlyRosterIcon from "../../public/assets/icons/MonthlyRosterIcon.png";
-// import ProfileIcon from "../../public/assets/icons/ProfileIcon.png";
 
 const drawerWidth = 250;
+const drawerIconWidth = 28;
+const drawerIconMargin = 16;
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -139,27 +134,31 @@ export default function Header() {
             )}
           </IconButton>
         </div>
-        <List>
+        <List
+          style={{
+            margin: "5%"
+          }}
+        >
           {[
             {
               label: "Home",
-              icon: "/static/public/assets/icons/HomeIcon.png"
+              icon: "/static/assets/icons/HomeIcon.png"
             },
             {
               label: "Profile",
-              icon: "/static/public/assets/icons/ProfileIcon.png"
+              icon: "/static/assets/icons/ProfileIcon.png"
             },
             {
               label: "Availabilities",
-              icon: "/static/public/assets/icons/AvailabilitiesIcon.png"
+              icon: "/static/assets/icons/AvailabilitiesIcon.png"
             },
             {
               label: "Monthly Roster",
-              icon: "/static/public/assets/icons/MonthlyRosterIcon.png"
+              icon: "/static/assets/icons/MonthlyRosterIcon.png"
             },
             {
               label: "Members",
-              icon: "/static/public/assets/icons/MembersIcon.png"
+              icon: "/static/assets/icons/MembersIcon.png"
             }
           ].map((button, index) => (
             <ListItem
@@ -171,10 +170,17 @@ export default function Header() {
                 borderRadius: "100px",
                 borderWidth: "2px",
                 color: "#E53232",
-                margin: "3%"
+                marginBottom: "3%"
               }}
             >
-              <img src={button.icon} />
+              <img
+                src={button.icon}
+                style={{
+                  width: drawerIconWidth,
+                  marginLeft: drawerIconMargin / 2,
+                  marginRight: drawerIconMargin
+                }}
+              />
               <ListItemText primary={button.label} />
             </ListItem>
           ))}
