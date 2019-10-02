@@ -14,8 +14,7 @@ class IntroPage extends Component{
             position: "absolute",
             top: "25%",
             left: "20%"
-
-        }
+        };
         const nameStyle1 = {
             color: "white",
             fontSize: "7.5vw", 
@@ -29,7 +28,8 @@ class IntroPage extends Component{
         const imgStyle = {
             display: "block",
             margin: "auto"
-        }
+        };
+
         return(
             <div style={backgroundStyle}>
                 <div style = {divStyle}>            
