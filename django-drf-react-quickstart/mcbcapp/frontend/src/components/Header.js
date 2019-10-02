@@ -21,6 +21,9 @@ const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1
   },
+  logoutButton: {
+    marginLeft: theme.spacing(2)
+  },
   menuButton: {
     marginRight: theme.spacing(2)
   },
@@ -106,14 +109,31 @@ export default function Header() {
             color="inherit"
             aria-label="menu"
             onClick={handleDrawerOpen}
-            edge="start"
           >
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
             Profile
           </Typography>
-          <Button color="inherit">Login</Button>
+          <IconButton
+            edge="end"
+            className={classes.logoutButton}
+            color="inherit"
+            aria-label="menu"
+            label="Log Out"
+          >
+            <Typography variant="subtitle1" className={classes.title}>
+              Log Out
+            </Typography>
+            <img
+              src="/static/assets/icons/logOutIcon.png"
+              style={{
+                width: "25px",
+                height: "25px",
+                marginLeft: "15px"
+              }}
+            />
+          </IconButton>
         </Toolbar>
       </AppBar>
       <Drawer
