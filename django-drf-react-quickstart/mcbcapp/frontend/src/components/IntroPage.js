@@ -31,7 +31,7 @@ class IntroPage extends Component{
             margin: "auto"
         }
         return(
-            <body style={backgroundStyle}>
+            <div style={backgroundStyle}>
                 <div style = {divStyle}>            
                     <img src = {"/static/assets/icons/logo.png"} 
                         alt = "app logo" 
@@ -46,7 +46,7 @@ class IntroPage extends Component{
                         ROSTER
                     </h2>                                      
                 </div> 
-            </body>
+            </div>
         );            
     }
 }
