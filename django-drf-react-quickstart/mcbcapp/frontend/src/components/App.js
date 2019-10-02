@@ -4,7 +4,7 @@ import DataProvider from "./DataProvider";
 import Header from "./Header";
 
 const App = () => (
-  <Header></Header>
+  <Header />
   // <React.Fragment>
   //   <DataProvider
   //     endpoint="api/rostering/"
