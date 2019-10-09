@@ -187,19 +187,19 @@ export default function Header() {
               to: ""
             }
           ].map((button, index) => (
-            <ListItem
-              button
-              key={button.label}
-              style={{
-                border: "solid",
-                borderColor: "#E53232",
-                borderRadius: "100px",
-                borderWidth: "2px",
-                color: "#E53232",
-                marginBottom: "3%"
-              }}
-            >
-              <Link to="/profile">
+            <Link to="/profile">
+              <ListItem
+                button
+                key={button.label}
+                style={{
+                  border: "solid",
+                  borderColor: "#E53232",
+                  borderRadius: "100px",
+                  borderWidth: "2px",
+                  color: "#E53232",
+                  marginBottom: "3%"
+                }}
+              >
                 <img
                   src={button.icon}
                   style={{
@@ -209,8 +209,8 @@ export default function Header() {
                   }}
                 />
                 <ListItemText primary={button.label} />
-              </Link>
-            </ListItem>
+              </ListItem>
+            </Link>
           ))}
         </List>
       </Drawer>
