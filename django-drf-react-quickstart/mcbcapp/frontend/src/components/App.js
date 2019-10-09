@@ -1,17 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import DataProvider from "./DataProvider";
+import Profile from "../views/ProfilePage";
 import Header from "./Header";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const App = () => (
-  <Header />
-  // <React.Fragment>
-  //   <DataProvider
-  //     endpoint="api/rostering/"
-  //     render={data => <Table data={data} />}
-  //   />
-  //   <Form endpoint="api/rostering/" />
-  // </React.Fragment>
+  <Router>
+    <Header />
+    <Switch>
+      <Route exact path="/profile">
+        <Profile />
+      </Route>
+    </Switch>
+  </Router>
 );
 
 export default App;

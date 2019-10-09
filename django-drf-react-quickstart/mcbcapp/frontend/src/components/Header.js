@@ -12,6 +12,7 @@ import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 
 const drawerWidth = 250;
 const drawerIconWidth = 28;
@@ -162,23 +163,28 @@ export default function Header() {
           {[
             {
               label: "HOME",
-              icon: "/static/assets/icons/HomeIcon.png"
+              icon: "/static/assets/icons/HomeIcon.png",
+              to: ""
             },
             {
               label: "PROFILE",
-              icon: "/static/assets/icons/ProfileIcon.png"
+              icon: "/static/assets/icons/ProfileIcon.png",
+              to: "/profile"
             },
             {
               label: "AVAILABILITIES",
-              icon: "/static/assets/icons/AvailabilitiesIcon.png"
+              icon: "/static/assets/icons/AvailabilitiesIcon.png",
+              to: ""
             },
             {
               label: "MONTHLY ROSTER",
-              icon: "/static/assets/icons/MonthlyRosterIcon.png"
+              icon: "/static/assets/icons/MonthlyRosterIcon.png",
+              to: ""
             },
             {
               label: "MEMBERS",
-              icon: "/static/assets/icons/MembersIcon.png"
+              icon: "/static/assets/icons/MembersIcon.png",
+              to: ""
             }
           ].map((button, index) => (
             <ListItem
@@ -193,15 +199,17 @@ export default function Header() {
                 marginBottom: "3%"
               }}
             >
-              <img
-                src={button.icon}
-                style={{
-                  width: drawerIconWidth,
-                  marginLeft: drawerIconMargin / 2,
-                  marginRight: drawerIconMargin
-                }}
-              />
-              <ListItemText primary={button.label} />
+              <Link to="/profile">
+                <img
+                  src={button.icon}
+                  style={{
+                    width: drawerIconWidth,
+                    marginLeft: drawerIconMargin / 2,
+                    marginRight: drawerIconMargin
+                  }}
+                />
+                <ListItemText primary={button.label} />
+              </Link>
             </ListItem>
           ))}
         </List>
