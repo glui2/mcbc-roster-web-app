@@ -187,10 +187,16 @@ export default function Header() {
               to: ""
             }
           ].map((button, index) => (
-            <Link to="/profile">
+            <Link
+              to="/profile"
+              style={{
+                textDecoration: "none"
+              }}
+            >
               <ListItem
                 button
                 key={button.label}
+                onClick={handleDrawerClose}
                 style={{
                   border: "solid",
                   borderColor: "#E53232",
