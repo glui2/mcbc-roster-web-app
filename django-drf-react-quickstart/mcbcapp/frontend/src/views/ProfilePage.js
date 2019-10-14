@@ -1,43 +1,47 @@
 import React from "react";
 import { makeStyles, useTheme, Typography } from "@material-ui/core";
+import MinistryIcon from "../components/MinistryIcon";
 import color from "@material-ui/core/colors/blueGrey";
+import { textAlign } from "@material-ui/system";
 
 const profileStyles = makeStyles(theme => ({
   backgroundStyling: {
-    backgroundImage: "/static/assets/images/background_profile_page.jpg",
+    backgroundImage:
+      "url(" + "/static/assets/images/backgroundProfilePage.jpg" + ")",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
     textAlign: "center",
     display: "flex",
-    flexDirection: "column",
-    height: "-webkit-fill-available"
+    flexDirection: "column"
   },
   usernameBox: {
     borderStyle: "solid",
     borderColor: "#E53232",
     margin: "auto",
-    marginTop: "5%",
-    marginBottom: "5%",
+    marginTop: "3%",
+    marginBottom: "3%",
     padding: "5%",
     paddingLeft: "8%",
     paddingRight: "8%"
   },
-  ministryIcon: {
-    width: "10%",
-    margin: "3%"
+  ministries: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center"
   }
 }));
 
 export default function ProfilePage() {
   const profileClasses = profileStyles();
-  const theme = useTheme();
 
   return (
     <div className={profileClasses.backgroundStyling}>
-      <div>
+      {/* <div>
         <img
-          style={{ width: "5%" }}
+          style={{ marginTop: "2%" }}
           src="/static/assets/icons/ProfileIcon2x.png"
         />
-      </div>
+      </div> */}
       <div className={profileClasses.usernameBox}>
         <Typography style={{ color: "#E53232" }} variant="h2">
           Chris <br /> Yeung
@@ -46,15 +50,12 @@ export default function ProfilePage() {
       <Typography style={{ color: "#E53232" }} variant="h6">
         I AM SERVING IN
       </Typography>
-      <div>
-        <img
-          src="/static/assets/icons/WorshipIcon.png"
-          className={profileClasses.ministryIcon}
+      <div className={profileClasses.ministries}>
+        <MinistryIcon
+          imgsrc="/static/assets/icons/WorshipIcon.png"
+          label="WORSHIP"
         />
-        <img
-          src="/static/assets/icons/AVIcon.png"
-          className={profileClasses.ministryIcon}
-        />
+        <MinistryIcon imgsrc="/static/assets/icons/AVIcon.png" label="AV" />
       </div>
     </div>
   );
