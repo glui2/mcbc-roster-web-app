@@ -38,12 +38,12 @@ class ProfilePage extends React.Component {
 
     return (
       <div className={classes.root}>
-        {/* <div>
+        <div>
           <img
-            style={{ marginTop: "2%" }}
+            style={{ marginTop: "1%" }}
             src="/static/assets/icons/ProfileIcon2x.png"
           />
-        </div> */}
+        </div>
         <div className={classes.usernameBox}>
           <Typography style={{ color: "#E53232" }} variant="h2">
             Chris <br /> Yeung
@@ -61,10 +61,10 @@ class ProfilePage extends React.Component {
             imgsrc="/static/assets/icons/AnnouncementsIcon.png"
             label="Announcements"
           />
-          <MinistryIcon
+          {/* <MinistryIcon
             imgsrc="/static/assets/icons/BibleReadingIcon.png"
             label="Bible Reading"
-          />
+          /> */}
           <MinistryIcon
             imgsrc="/static/assets/icons/CommunionIcon.png"
             label="Communion"
