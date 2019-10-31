@@ -1,4 +1,5 @@
 :: run this script to install needed packages and modules
+@ECHO OFF 
 ECHO Installing Django...
 pip install django 
 
