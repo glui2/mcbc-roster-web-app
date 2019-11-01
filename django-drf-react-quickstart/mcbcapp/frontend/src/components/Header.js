@@ -12,6 +12,7 @@ import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 
 const drawerWidth = 250;
 const drawerIconWidth = 28;
@@ -162,47 +163,60 @@ export default function Header() {
           {[
             {
               label: "HOME",
-              icon: "/static/assets/icons/HomeIcon.png"
+              icon: "/static/assets/icons/HomeIcon.png",
+              to: ""
             },
             {
               label: "PROFILE",
-              icon: "/static/assets/icons/ProfileIcon.png"
+              icon: "/static/assets/icons/ProfileIcon.png",
+              to: "/profile"
             },
             {
               label: "AVAILABILITIES",
-              icon: "/static/assets/icons/AvailabilitiesIcon.png"
+              icon: "/static/assets/icons/AvailabilitiesIcon.png",
+              to: ""
             },
             {
               label: "MONTHLY ROSTER",
-              icon: "/static/assets/icons/MonthlyRosterIcon.png"
+              icon: "/static/assets/icons/MonthlyRosterIcon.png",
+              to: ""
             },
             {
               label: "MEMBERS",
-              icon: "/static/assets/icons/MembersIcon.png"
+              icon: "/static/assets/icons/MembersIcon.png",
+              to: ""
             }
           ].map((button, index) => (
-            <ListItem
-              button
-              key={button.label}
+            <Link
+              to="/profile"
               style={{
-                border: "solid",
-                borderColor: "#E53232",
-                borderRadius: "100px",
-                borderWidth: "2px",
-                color: "#E53232",
-                marginBottom: "3%"
+                textDecoration: "none"
               }}
             >
-              <img
-                src={button.icon}
+              <ListItem
+                button
+                key={button.label}
+                onClick={handleDrawerClose}
                 style={{
-                  width: drawerIconWidth,
-                  marginLeft: drawerIconMargin / 2,
-                  marginRight: drawerIconMargin
+                  border: "solid",
+                  borderColor: "#E53232",
+                  borderRadius: "100px",
+                  borderWidth: "2px",
+                  color: "#E53232",
+                  marginBottom: "3%"
                 }}
-              />
-              <ListItemText primary={button.label} />
-            </ListItem>
+              >
+                <img
+                  src={button.icon}
+                  style={{
+                    width: drawerIconWidth,
+                    marginLeft: drawerIconMargin / 2,
+                    marginRight: drawerIconMargin
+                  }}
+                />
+                <ListItemText primary={button.label} />
+              </ListItem>
+            </Link>
           ))}
         </List>
       </Drawer>
