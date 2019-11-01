@@ -13,6 +13,11 @@ import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import { BrowserRouter as Router, Link } from "react-router-dom";
+import Dialog from "@material-ui/core/Dialog";
+import DialogActions from "@material-ui/core/DialogActions";
+import DialogContent from "@material-ui/core/DialogContent";
+import DialogContentText from "@material-ui/core/DialogContentText";
+import DialogTitle from "@material-ui/core/DialogTitle";
 
 const drawerWidth = 250;
 const drawerIconWidth = 28;
@@ -83,13 +88,23 @@ const useStyles = makeStyles(theme => ({
 export default function Header() {
   const classes = useStyles();
   const theme = useTheme();
-  const [open, setOpen] = React.useState(false);
+  const [drawerOpen, setDrawerOpen] = React.useState(false);
+  const [logoutOpen, setLogoutOpen] = React.useState(false);
+
   const handleDrawerClose = () => {
-    setOpen(false);
+    setDrawerOpen(false);
   };
 
   const handleDrawerOpen = () => {
-    setOpen(true);
+    setDrawerOpen(true);
+  };
+
+  const handleClickOpen = () => {
+    setLogoutOpen(true);
+  };
+
+  const handleClose = () => {
+    setLogoutOpen(false);
   };
 
   return (
@@ -122,6 +137,7 @@ export default function Header() {
             color="inherit"
             aria-label="menu"
             label="Log Out"
+            onClick={handleClickOpen}
           >
             <Typography variant="subtitle1" className={classes.title}>
               Log Out
@@ -135,13 +151,29 @@ export default function Header() {
               }}
             />
           </IconButton>
+          <Dialog
+            open={logoutOpen}
+            onClose={handleClose}
+            aria-labelledby="alert-dialog-title"
+            aria-describedby="alert-dialog-description"
+          >
+            <DialogTitle id="alert-dialog-title">{"LOG OUT?"}</DialogTitle>
+            <DialogActions>
+              <Button onClick={handleClose} color="primary">
+                Yes
+              </Button>
+              <Button onClick={handleClose} color="primary" autoFocus>
+                No
+              </Button>
+            </DialogActions>
+          </Dialog>
         </Toolbar>
       </AppBar>
       <Drawer
         className={classes.drawer}
         variant="persistent"
         anchor="left"
-        open={open}
+        open={drawerOpen}
         classes={{
           paper: classes.drawerPaper
         }}
