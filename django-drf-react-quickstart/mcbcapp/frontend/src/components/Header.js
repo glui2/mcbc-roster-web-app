@@ -31,14 +31,15 @@ const useStyles = makeStyles(theme => ({
   logoutButton: {
     marginLeft: theme.spacing(2)
   },
-  logoutDialog: {},
   logoutDialogText: {
     textAlign: "center",
     fontWeight: "bolder"
   },
   logoutDialogButton: {
     borderRadius: "100px",
-    margin: "auto"
+    margin: "auto",
+    paddingLeft: "15%",
+    paddingRight: "15%"
   },
   menuButton: {
     marginRight: theme.spacing(2)
@@ -166,7 +167,7 @@ export default function Header() {
             onClose={handleClose}
             aria-labelledby="alert-dialog-title"
             aria-describedby="alert-dialog-description"
-            width="30%"
+            fullWidth
           >
             <DialogTitle
               id="alert-dialog-title"
@@ -181,7 +182,6 @@ export default function Header() {
                 className={classes.logoutDialogButton}
                 onClick={handleClose}
                 color="primary"
-                px="30%"
               >
                 Yes
               </Button>
@@ -191,7 +191,6 @@ export default function Header() {
                 onClick={handleClose}
                 color="primary"
                 autoFocus
-                px="30%"
               >
                 No
               </Button>
