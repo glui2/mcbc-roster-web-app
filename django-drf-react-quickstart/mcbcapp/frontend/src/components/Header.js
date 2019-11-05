@@ -172,9 +172,10 @@ export default function Header() {
             <DialogTitle
               id="alert-dialog-title"
               className={classes.logoutDialogText}
-              color="primary"
             >
-              {"LOG OUT?"}
+              <Typography variant="h6" color="primary">
+                Are you sure you want to log out?
+              </Typography>
             </DialogTitle>
             <DialogActions>
               <Button
