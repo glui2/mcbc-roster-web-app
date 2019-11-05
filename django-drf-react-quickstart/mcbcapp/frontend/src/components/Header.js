@@ -18,6 +18,7 @@ import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
+import { spacing } from "@material-ui/system";
 
 const drawerWidth = 250;
 const drawerIconWidth = 28;
@@ -29,6 +30,15 @@ const useStyles = makeStyles(theme => ({
   },
   logoutButton: {
     marginLeft: theme.spacing(2)
+  },
+  logoutDialog: {},
+  logoutDialogText: {
+    textAlign: "center",
+    fontWeight: "bolder"
+  },
+  logoutDialogButton: {
+    borderRadius: "100px",
+    margin: "auto"
   },
   menuButton: {
     marginRight: theme.spacing(2)
@@ -156,13 +166,33 @@ export default function Header() {
             onClose={handleClose}
             aria-labelledby="alert-dialog-title"
             aria-describedby="alert-dialog-description"
+            width="30%"
           >
-            <DialogTitle id="alert-dialog-title">{"LOG OUT?"}</DialogTitle>
+            <DialogTitle
+              id="alert-dialog-title"
+              className={classes.logoutDialogText}
+              color="primary"
+            >
+              {"LOG OUT?"}
+            </DialogTitle>
             <DialogActions>
-              <Button onClick={handleClose} color="primary">
+              <Button
+                variant="contained"
+                className={classes.logoutDialogButton}
+                onClick={handleClose}
+                color="primary"
+                px="30%"
+              >
                 Yes
               </Button>
-              <Button onClick={handleClose} color="primary" autoFocus>
+              <Button
+                variant="contained"
+                className={classes.logoutDialogButton}
+                onClick={handleClose}
+                color="primary"
+                autoFocus
+                px="30%"
+              >
                 No
               </Button>
             </DialogActions>
