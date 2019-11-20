@@ -1,5 +1,10 @@
 from django.urls import path
 from . import views
+from django.conf.urls import url, include
+from rostering.resources import VolunteerResource
+
+volunteer_resource = VolunteerResource()
+
 urlpatterns = [
-    path('api/rostering/', views.VolunteerListCreate.as_view()),
+    url(r'^api/', include(volunteer_resource.urls)),
 ]

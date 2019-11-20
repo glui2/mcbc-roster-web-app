@@ -15,8 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls import url
 
 urlpatterns = [
-    path('', include('rostering.urls')),
-    path('', include('frontend.urls'))
+    url(r'^', include('frontend.urls')),
+    url(r'^rostering/', include('rostering.urls')),
 ]
