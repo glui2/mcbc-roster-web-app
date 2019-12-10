@@ -13,6 +13,9 @@ import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import { BrowserRouter as Router, Link } from "react-router-dom";
+import Dialog from "@material-ui/core/Dialog";
+import DialogActions from "@material-ui/core/DialogActions";
+import DialogTitle from "@material-ui/core/DialogTitle";
 
 const drawerWidth = 250;
 const drawerIconWidth = 28;
@@ -24,6 +27,16 @@ const useStyles = makeStyles(theme => ({
   },
   logoutButton: {
     marginLeft: theme.spacing(2)
+  },
+  logoutDialogText: {
+    textAlign: "center",
+    fontWeight: "bolder"
+  },
+  logoutDialogButton: {
+    borderRadius: "100px",
+    margin: "auto",
+    paddingLeft: "15%",
+    paddingRight: "15%"
   },
   menuButton: {
     marginRight: theme.spacing(2)
@@ -83,13 +96,23 @@ const useStyles = makeStyles(theme => ({
 export default function Header() {
   const classes = useStyles();
   const theme = useTheme();
-  const [open, setOpen] = React.useState(false);
+  const [drawerOpen, setDrawerOpen] = React.useState(false);
+  const [logoutOpen, setLogoutOpen] = React.useState(false);
+
   const handleDrawerClose = () => {
-    setOpen(false);
+    setDrawerOpen(false);
   };
 
   const handleDrawerOpen = () => {
-    setOpen(true);
+    setDrawerOpen(true);
+  };
+
+  const handleClickOpen = () => {
+    setLogoutOpen(true);
+  };
+
+  const handleClose = () => {
+    setLogoutOpen(false);
   };
 
   return (
@@ -122,6 +145,7 @@ export default function Header() {
             color="inherit"
             aria-label="menu"
             label="Log Out"
+            onClick={handleClickOpen}
           >
             <Typography variant="subtitle1" className={classes.title}>
               Log Out
@@ -135,13 +159,48 @@ export default function Header() {
               }}
             />
           </IconButton>
+          <Dialog
+            open={logoutOpen}
+            onClose={handleClose}
+            aria-labelledby="alert-dialog-title"
+            aria-describedby="alert-dialog-description"
+            fullWidth
+          >
+            <DialogTitle
+              id="alert-dialog-title"
+              className={classes.logoutDialogText}
+            >
+              <Typography variant="h6" color="primary">
+                Are you sure you want to log out?
+              </Typography>
+            </DialogTitle>
+            <DialogActions>
+              <Button
+                variant="contained"
+                className={classes.logoutDialogButton}
+                onClick={handleClose}
+                color="primary"
+              >
+                Yes
+              </Button>
+              <Button
+                variant="contained"
+                className={classes.logoutDialogButton}
+                onClick={handleClose}
+                color="primary"
+                autoFocus
+              >
+                No
+              </Button>
+            </DialogActions>
+          </Dialog>
         </Toolbar>
       </AppBar>
       <Drawer
         className={classes.drawer}
         variant="persistent"
         anchor="left"
-        open={open}
+        open={drawerOpen}
         classes={{
           paper: classes.drawerPaper
         }}
