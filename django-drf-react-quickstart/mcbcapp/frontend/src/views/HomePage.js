@@ -5,9 +5,9 @@ import color from "@material-ui/core/colors/blueGrey";
 import { textAlign } from "@material-ui/system";
 import { withStyles } from "@material-ui/styles";
 
-const profileStyles = theme => ({
+const homeStyles = theme => ({
   root: {
-    backgroundColor: "navy",
+    backgroundColor: "#32669D",
     backgroundSize: "cover",
     backgroundPosition: "center",
     textAlign: "center",
@@ -24,37 +24,47 @@ const profileStyles = theme => ({
   }
 });
 
-// takes desired day of the week as input (0-6), outputs next date with that day of the week, relative to today
-function nextDay(x) {
-  var now = new Date();
-  now.setDate(now.getDate() + ((x + (7 - now.getDay())) % 7));
-  return now;
-}
+class HomePage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.nextDay = this.nextDay.bind(this);
+  }
+  nextDay(x) {
+    var now = new Date();
+    now.setDate(now.getDate() + ((x + (7 - now.getDay())) % 7));
+    return now;
+  }
 
-class ProfilePage extends React.Component {
+  // takes desired day of the week as input (0-6), outputs next date with that day of the week, relative to today
   render() {
     const { classes } = this.props;
-    const comingSunday = nextDay(0);
-    const month = comingSunday.getMonth;
-    const date = comingSunday.getDate;
+    var comingSunday = this.nextDay(0);
+    var month = comingSunday.getMonth;
+    var date = comingSunday.getDate;
 
     return (
       <div className={classes.root}>
         <div className={classes.textContainer}>
-          <Typography variant="h5">This upcoming Sunday</Typography>
-          <Typography variant="h3">
+          <Typography style={{ color: "#FFFFFF" }} variant="h5">
+            This upcoming Sunday
+          </Typography>
+          <Typography style={{ color: "#FFFFFF" }} variant="h3">
             {date} {month}
           </Typography>
-          <Typography variant="h5">You are rostered on</Typography>
+          <Typography style={{ color: "#FFFFFF" }} variant="h5">
+            You are rostered on
+          </Typography>
           <MinistryIcon
             imgsrc="/static/assets/icons/WorshipIcon.png"
             label=""
           />
-          <Typography>WORSHIP</Typography>
+          <Typography style={{ color: "#FFFFFF" }} variant="h5">
+            WORSHIP
+          </Typography>
         </div>
       </div>
     );
   }
 }
 
-export default withStyles(profileStyles)(ProfilePage);
+export default withStyles(homeStyles)(HomePage);

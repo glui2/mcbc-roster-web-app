@@ -247,7 +247,7 @@ export default function Header() {
             }
           ].map((button, index) => (
             <Link
-              to="/profile"
+              to={button.to}
               style={{
                 textDecoration: "none"
               }}

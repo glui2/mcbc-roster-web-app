@@ -10,6 +10,9 @@ const mcbcTheme = createMuiTheme({
     },
     secondary: {
       main: "#32669D"
+    },
+    tertiary: {
+      main: "#FFFFFF"
     }
   },
   typography: {
