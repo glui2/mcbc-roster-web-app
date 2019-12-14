@@ -1,6 +1,8 @@
 import React from "react";
 import { makeStyles, useTheme, Typography } from "@material-ui/core";
 import { withStyles } from "@material-ui/styles";
+import TextField from "@material-ui/core";
+import Button from "@material-ui/core";
 
 const loginStyles = theme => ({
   root: {
@@ -40,12 +42,18 @@ class LoginPage extends React.Component {
         </div>
         <div>
           <div className={classes.loginBox}>  
-            <input type = "text" placeholder = "Username" name = "uname" required></input>
+            {/* <input type = "text" placeholder = "Username" name = "uname" required></input> */}
           </div>
           <div className={classes.loginBox}>
-            <input type = "text" placeholder = "Password" name = "pword" required></input>
+          <TextField
+          id="outlined-password-input"
+          label="Password"
+          type="password"
+          variant="outlined"/>
           </div>
-          <button className={classes.loginButton} type = "submit" > Login </button>
+          <Button style={{borderRadius: "100%"}} variant="contained" color="primary">
+            Login
+         </Button>
         </div>
       </div>
     );
