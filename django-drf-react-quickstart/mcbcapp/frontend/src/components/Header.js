@@ -223,7 +223,7 @@ export default function Header() {
             {
               label: "HOME",
               icon: "/static/assets/icons/HomeIcon.png",
-              to: ""
+              to: "/home"
             },
             {
               label: "PROFILE",
