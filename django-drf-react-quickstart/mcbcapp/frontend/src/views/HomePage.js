@@ -7,12 +7,19 @@ import { withStyles } from "@material-ui/styles";
 
 const homeStyles = theme => ({
   root: {
-    backgroundColor: "#32669D",
+    backgroundImage:
+      "url(" + "/static/assets/images/backgroundHomePage1.jpg" + ")",
     backgroundSize: "cover",
     backgroundPosition: "center",
     textAlign: "center",
     display: "flex",
     flexDirection: "column"
+  },
+  layer: {
+    backgroundColor: "#32669d",
+    opacity: "85%",
+    width: "100%",
+    height: "100%"
   },
   textContainer: {
     margin: "auto",
@@ -25,42 +32,44 @@ const homeStyles = theme => ({
 });
 
 class HomePage extends React.Component {
-  constructor(props) {
-    super(props);
-    this.nextDay = this.nextDay.bind(this);
-  }
-  nextDay(x) {
-    var now = new Date();
-    now.setDate(now.getDate() + ((x + (7 - now.getDay())) % 7));
-    return now;
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.nextDay = this.nextDay.bind(this);
+  // }
+  // nextDay(x) {
+  //   var now = new Date();
+  //   now.setDate(now.getDate() + ((x + (7 - now.getDay())) % 7));
+  //   return now;
+  // }
 
   // takes desired day of the week as input (0-6), outputs next date with that day of the week, relative to today
   render() {
     const { classes } = this.props;
-    var comingSunday = this.nextDay(0);
-    var month = comingSunday.getMonth;
-    var date = comingSunday.getDate;
+    // var comingSunday = this.nextDay(0);
+    // var month = comingSunday.getMonth;
+    // var date = comingSunday.getDate;
 
     return (
       <div className={classes.root}>
-        <div className={classes.textContainer}>
-          <Typography style={{ color: "#FFFFFF" }} variant="h5">
-            This upcoming Sunday
-          </Typography>
-          <Typography style={{ color: "#FFFFFF" }} variant="h3">
-            {date} {month}
-          </Typography>
-          <Typography style={{ color: "#FFFFFF" }} variant="h5">
-            You are rostered on
-          </Typography>
-          <MinistryIcon
-            imgsrc="/static/assets/icons/WorshipIcon.png"
-            label=""
-          />
-          <Typography style={{ color: "#FFFFFF" }} variant="h5">
-            WORSHIP
-          </Typography>
+        <div className={classes.layer}>
+          <div className={classes.textContainer}>
+            <Typography style={{ color: "#FFFFFF" }} variant="h5">
+              This upcoming Sunday
+            </Typography>
+            <Typography style={{ color: "#FFFFFF" }} variant="h3">
+              Dec 16
+            </Typography>
+            <Typography style={{ color: "#FFFFFF" }} variant="h5">
+              You are rostered on
+            </Typography>
+            <MinistryIcon
+              imgsrc="/static/assets/icons/WorshipIcon_white.png"
+              label=""
+            />
+            <Typography style={{ color: "#FFFFFF" }} variant="h5">
+              WORSHIP
+            </Typography>
+          </div>
         </div>
       </div>
     );
