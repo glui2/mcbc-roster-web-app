@@ -17,7 +17,7 @@ const homeStyles = theme => ({
   },
   layer: {
     backgroundColor: "#32669d",
-    opacity: "85%",
+    opacity: "70%",
     width: "100%",
     height: "100%"
   },
@@ -54,19 +54,19 @@ class HomePage extends React.Component {
         <div className={classes.layer}>
           <div className={classes.textContainer}>
             <Typography style={{ color: "#FFFFFF" }} variant="h5">
-              This upcoming Sunday
+              THIS UPCOMING SUNDAY
             </Typography>
-            <Typography style={{ color: "#FFFFFF" }} variant="h3">
-              Dec 16
+            <Typography style={{ color: "#FFFFFF", margin: "2%" }} variant="h3">
+              Dec 22
             </Typography>
             <Typography style={{ color: "#FFFFFF" }} variant="h5">
-              You are rostered on
+              YOU ARE ROSTERED ON
             </Typography>
             <MinistryIcon
               imgsrc="/static/assets/icons/WorshipIcon_white.png"
               label=""
             />
-            <Typography style={{ color: "#FFFFFF" }} variant="h5">
+            <Typography style={{ color: "#FFFFFF" }} variant="h3">
               WORSHIP
             </Typography>
           </div>
