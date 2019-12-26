@@ -53,20 +53,32 @@ class HomePage extends React.Component {
       <div className={classes.root}>
         <div className={classes.layer}>
           <div className={classes.textContainer}>
-            <Typography style={{ color: "#FFFFFF" }} variant="h5">
+            <Typography
+              style={{ color: "#FFFFFF", letterSpacing: "6px" }}
+              variant="h5"
+            >
               THIS UPCOMING SUNDAY
             </Typography>
-            <Typography style={{ color: "#FFFFFF", margin: "2%" }} variant="h3">
+            <Typography
+              style={{ color: "#FFFFFF", margin: "2%", letterSpacing: "10px" }}
+              variant="h3"
+            >
               Dec 22
             </Typography>
-            <Typography style={{ color: "#FFFFFF" }} variant="h5">
+            <Typography
+              style={{ color: "#FFFFFF", letterSpacing: "6px" }}
+              variant="h5"
+            >
               YOU ARE ROSTERED ON
             </Typography>
             <MinistryIcon
               imgsrc="/static/assets/icons/WorshipIcon_white.png"
               label=""
             />
-            <Typography style={{ color: "#FFFFFF" }} variant="h3">
+            <Typography
+              style={{ color: "#FFFFFF", letterSpacing: "10px" }}
+              variant="h3"
+            >
               WORSHIP
             </Typography>
           </div>
