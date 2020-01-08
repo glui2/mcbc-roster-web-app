@@ -9,6 +9,7 @@ from django.contrib import admin
 
 router = routers.DefaultRouter()
 router.register(r'volunteers',views.VolunteerViewSet)
+router.register(r'ministrys',views.MinistryViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),

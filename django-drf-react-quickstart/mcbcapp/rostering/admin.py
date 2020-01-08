@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Volunteer, VolunteerAdmin
+from .models import Volunteer, VolunteerAdmin, Ministry
 
 # Customise Admin interface
 admin.site.site_header = "MCBC App Administration"
@@ -8,3 +8,4 @@ admin.site.index_title = "MCBC Administration"
 
 # Register Models
 admin.site.register(Volunteer, VolunteerAdmin)
+admin.site.register(Ministry)
