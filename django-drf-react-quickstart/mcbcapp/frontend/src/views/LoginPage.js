@@ -3,6 +3,7 @@ import { makeStyles, useTheme, Typography } from "@material-ui/core";
 import { withStyles } from "@material-ui/styles";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
+import InputAdornment from '@material-ui/core/InputAdornment';
 
 const loginStyles = theme => ({
   root: {
@@ -37,21 +38,47 @@ class LoginPage extends React.Component {
         <div>
           <img
             style={{ marginTop: "1%" }}
-            src="/static/assets/icons/ProfileIcon2x.png" // LOGO TO ADD
+            src="/static/assets/icons/RosterIcon.png" // LOGO TO ADD
           />
         </div>
         <div>
           <div className={classes.loginBox}>  
-            {/* <input type = "text" placeholder = "Username" name = "uname" required></input> */}
+            <TextField
+            id="outlined-required"
+            label="username"
+            defaultValue=""
+            variant="outlined"
+            InputProps={{
+              startAdornment: (
+                <InputAdornment position="start">
+                  <img style={{ marginTop: "1%" }} src="/static/assets/icons/ProfileIcon.png"/>
+                </InputAdornment>
+              ),
+            }}/>
           </div>
           <div className={classes.loginBox}>
-          <TextField
-          id="outlined-password-input"
-          label="Password"
-          type="password"
-          variant="outlined"/>
+            <TextField
+            id="outlined-password-input"
+            label="Password"
+            type="password"
+            variant="outlined"
+            InputProps={{
+              startAdornment: (
+                <InputAdornment position="start">
+                  <img style={{ marginTop: "1%" }} src="/static/assets/icons/PasswordIcon.png"/>
+                </InputAdornment>
+              ),
+            }}/>        
+            
+            
           </div>
-          <Button style={{borderRadius: "100%"}} variant="contained" color="primary">
+          <Button style={{
+            borderRadius: "100px",
+            margin: "auto",
+            paddingLeft: "15%",
+            paddingRight: "15%"}}  
+            variant="contained" 
+            color="primary">
             Login
          </Button>
         </div>
