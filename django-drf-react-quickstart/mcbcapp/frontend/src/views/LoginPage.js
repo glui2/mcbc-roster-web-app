@@ -34,7 +34,6 @@ class LoginPage extends React.Component {
           <Grid container spacing={3}>
             <Grid item xs={12}>
               <img
-                style={{ marginTop: "1%" }}
                 src="/static/assets/icons/RosterIcon.png"
               />
             </Grid>
@@ -49,7 +48,6 @@ class LoginPage extends React.Component {
                   startAdornment: (
                     <InputAdornment position="start">
                       <img
-                        style={{ marginTop: "1%" }}
                         src="/static/assets/icons/ProfileIcon.png"
                       />
                     </InputAdornment>
@@ -68,7 +66,6 @@ class LoginPage extends React.Component {
                   startAdornment: (
                     <InputAdornment position="start">
                       <img
-                        style={{ marginTop: "1%" }}
                         src="/static/assets/icons/PasswordIcon.png"
                       />
                     </InputAdornment>
