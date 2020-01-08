@@ -4,31 +4,10 @@ import MinistryIcon from "../components/MinistryIcon";
 import color from "@material-ui/core/colors/blueGrey";
 import { textAlign } from "@material-ui/system";
 import { withStyles } from "@material-ui/styles";
+import homePageStyling from "../styling";
 
 const homeStyles = theme => ({
-  root: {
-    backgroundImage:
-      "url(" + "/static/assets/images/backgroundHomePage1.jpg" + ")",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    textAlign: "center",
-    display: "flex",
-    flexDirection: "column"
-  },
-  layer: {
-    backgroundColor: "#32669d",
-    opacity: "70%",
-    width: "100%",
-    height: "100%"
-  },
-  textContainer: {
-    margin: "auto",
-    marginTop: "3%",
-    marginBottom: "3%",
-    padding: "5%",
-    paddingLeft: "8%",
-    paddingRight: "8%"
-  }
+  homePageStyling
 });
 
 class HomePage extends React.Component {
