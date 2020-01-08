@@ -1,8 +1,8 @@
 import React from "react";
 import { makeStyles, useTheme, Typography } from "@material-ui/core";
 import { withStyles } from "@material-ui/styles";
-import TextField from "@material-ui/core";
-import Button from "@material-ui/core";
+import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
 
 const loginStyles = theme => ({
   root: {
