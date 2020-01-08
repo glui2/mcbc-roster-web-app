@@ -223,7 +223,7 @@ export default function Header() {
             {
               label: "HOME",
               icon: "/static/assets/icons/HomeIcon.png",
-              to: ""
+              to: "/home"
             },
             {
               label: "PROFILE",
@@ -247,7 +247,7 @@ export default function Header() {
             }
           ].map((button, index) => (
             <Link
-              to="/profile"
+              to={button.to}
               style={{
                 textDecoration: "none"
               }}
