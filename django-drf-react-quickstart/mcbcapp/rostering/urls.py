@@ -1,10 +1,16 @@
-from django.urls import path
+from django.urls import include, path
 from . import views
-from django.conf.urls import url, include
-from rostering.resources import VolunteerResource
+#from django.conf.urls import url, include
+#from rostering.resources import VolunteerResource
+from rest_framework import routers
 
-volunteer_resource = VolunteerResource()
+#volunteer_resource = VolunteerResource()
+
+router = routers.DefaultRouter()
+router.register(r'volunteers',views.VolunteerViewSet)
 
 urlpatterns = [
-    url(r'^api/', include(volunteer_resource.urls)),
+    path('', include(router.urls)),
+    path('api-auth/', include('rest_framework.urls', 
+    namespace='rest_framework'))
 ]
