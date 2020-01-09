@@ -1,20 +1,6 @@
-export const loginPageStyles = {
-  root: {
-    backgroundImage: "url(" + "/static/assets/images/backgroundLogin.png" + ")",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    textAlign: "center",
-    display: "flex",
-    flexDirection: "column"
-  },
-  logindiv: {
-    marginTop: "12%",
-    marginBottom: "13%"
-  },
-  logintext: {
-    width: "25%"
-  }
-};
+// contains stylings for the respective views, ordered alphabetically
+// naming convention: export const <nameOfPageInCamelCase> = { className: {styleElement: value}}
+// then import the constant into its respective page
 
 export const homePageStyles = {
   root: {
@@ -39,6 +25,24 @@ export const homePageStyles = {
     padding: "5%",
     paddingLeft: "8%",
     paddingRight: "8%"
+  }
+};
+
+export const loginPageStyles = {
+  root: {
+    backgroundImage: "url(" + "/static/assets/images/backgroundLogin.png" + ")",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    textAlign: "center",
+    display: "flex",
+    flexDirection: "column"
+  },
+  logindiv: {
+    marginTop: "12%",
+    marginBottom: "13%"
+  },
+  logintext: {
+    width: "25%"
   }
 };
 

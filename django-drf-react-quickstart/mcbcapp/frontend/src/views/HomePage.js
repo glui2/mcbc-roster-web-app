@@ -3,7 +3,7 @@ import { makeStyles, useTheme, Typography } from "@material-ui/core";
 import MinistryIcon from "../components/MinistryIcon";
 import color from "@material-ui/core/colors/blueGrey";
 import { textAlign } from "@material-ui/system";
-import { homePageStyles } from "../styling";
+import { homePageStyles } from "../styles";
 import { withStyles } from "@material-ui/styles";
 
 class HomePage extends React.Component {
