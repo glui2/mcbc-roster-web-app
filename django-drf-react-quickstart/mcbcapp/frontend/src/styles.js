@@ -75,12 +75,18 @@ export const profilePageStyles = {
   usernameBox: {
     borderColor: "#E53232",
     borderStyle: "solid",
+    color: "#E53232",
+    letterSpacing: "6px",
     margin: "auto",
     marginBottom: "3%",
     marginTop: "3%",
     padding: "5%",
     paddingLeft: "8%",
     paddingRight: "8%"
+  },
+  subheading: {
+    color: "#E53232",
+    letterSpacing: "3px"
   },
   ministries: {
     display: "flex",

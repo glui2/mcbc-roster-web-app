@@ -16,11 +16,11 @@ class ProfilePage extends React.Component {
           <img src="/static/assets/icons/ProfileIcon2x.png" />
         </div>
         <div className={classes.usernameBox}>
-          <Typography style={{ color: "#E53232" }} variant="h2">
+          <Typography variant="h2">
             Chris <br /> Yeung
           </Typography>
         </div>
-        <Typography style={{ color: "#E53232" }} variant="h6">
+        <Typography className={classes.subheading} variant="h6">
           I AM SERVING IN
         </Typography>
         <div className={classes.ministries}>
