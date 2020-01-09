@@ -4,11 +4,9 @@ import MinistryIcon from "../components/MinistryIcon";
 import color from "@material-ui/core/colors/blueGrey";
 import { textAlign } from "@material-ui/system";
 import { withStyles } from "@material-ui/styles";
-import homePageStyling from "../styling";
+import { homePageStyles } from "../styling";
 
-const homeStyles = theme => ({
-  homePageStyling
-});
+const homeStyles = homePageStyles;
 
 class HomePage extends React.Component {
   // constructor(props) {

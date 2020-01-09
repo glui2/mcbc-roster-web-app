@@ -1,4 +1,4 @@
-export const homePageStyling = {
+export const homePageStyles = {
   root: {
     backgroundImage:
       "url(" + "/static/assets/images/backgroundHomePage1.jpg" + ")",
