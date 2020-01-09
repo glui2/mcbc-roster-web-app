@@ -6,42 +6,57 @@ export const homePageStyles = {
   root: {
     backgroundImage:
       "url(" + "/static/assets/images/backgroundHomePage1.jpg" + ")",
-    backgroundSize: "cover",
     backgroundPosition: "center",
-    textAlign: "center",
+    backgroundSize: "cover",
     display: "flex",
-    flexDirection: "column"
+    flexDirection: "column",
+    textAlign: "center"
   },
   layer: {
     backgroundColor: "#32669d",
+    height: "100%",
     opacity: "70%",
-    width: "100%",
-    height: "100%"
+    width: "100%"
   },
   textContainer: {
     margin: "auto",
-    marginTop: "3%",
     marginBottom: "3%",
+    marginTop: "3%",
     padding: "5%",
     paddingLeft: "8%",
     paddingRight: "8%"
+  },
+  subheading: {
+    color: "#FFFFFF",
+    letterSpacing: "6px"
+  },
+  heading: {
+    color: "#FFFFFF",
+    letterSpacing: "10px",
+    margin: "2%"
   }
 };
 
 export const loginPageStyles = {
   root: {
     backgroundImage: "url(" + "/static/assets/images/backgroundLogin.png" + ")",
-    backgroundSize: "cover",
     backgroundPosition: "center",
-    textAlign: "center",
+    backgroundSize: "cover",
     display: "flex",
-    flexDirection: "column"
+    flexDirection: "column",
+    textAlign: "center"
   },
-  logindiv: {
-    marginTop: "12%",
-    marginBottom: "13%"
+  loginButton: {
+    borderRadius: "100px",
+    margin: "auto",
+    paddingLeft: "15%",
+    paddingRight: "15%"
   },
-  logintext: {
+  loginDiv: {
+    marginBottom: "13%",
+    marginTop: "12%"
+  },
+  loginInputField: {
     width: "25%"
   }
 };
@@ -50,18 +65,19 @@ export const profilePageStyles = {
   root: {
     backgroundImage:
       "url(" + "/static/assets/images/backgroundProfilePage.jpg" + ")",
-    backgroundSize: "cover",
     backgroundPosition: "center",
-    textAlign: "center",
+    backgroundSize: "cover",
     display: "flex",
-    flexDirection: "column"
+    flexDirection: "column",
+    padding: "1%",
+    textAlign: "center"
   },
   usernameBox: {
-    borderStyle: "solid",
     borderColor: "#E53232",
+    borderStyle: "solid",
     margin: "auto",
-    marginTop: "3%",
     marginBottom: "3%",
+    marginTop: "3%",
     padding: "5%",
     paddingLeft: "8%",
     paddingRight: "8%"

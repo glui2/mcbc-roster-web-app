@@ -13,17 +13,14 @@ class LoginPage extends React.Component {
 
     return (
       <div className={classes.root}>
-        <div className={classes.logindiv}>
+        <div className={classes.loginDiv}>
           <Grid container spacing={3}>
             <Grid item xs={12}>
-              <img
-                style={{ marginTop: "1%" }}
-                src="/static/assets/icons/RosterIcon.png"
-              />
+              <img src="/static/assets/icons/RosterIcon.png" />
             </Grid>
             <Grid item xs={12}>
               <TextField
-                className={classes.logintext}
+                className={classes.loginInputField}
                 id="outlined-required"
                 label="username"
                 defaultValue=""
@@ -31,10 +28,7 @@ class LoginPage extends React.Component {
                 InputProps={{
                   startAdornment: (
                     <InputAdornment position="start">
-                      <img
-                        style={{ marginTop: "1%" }}
-                        src="/static/assets/icons/ProfileIcon.png"
-                      />
+                      <img src="/static/assets/icons/ProfileIcon.png" />
                     </InputAdornment>
                   )
                 }}
@@ -42,7 +36,7 @@ class LoginPage extends React.Component {
             </Grid>
             <Grid item xs={12}>
               <TextField
-                className={classes.logintext}
+                className={classes.loginInputField}
                 id="outlined-password-input"
                 label="Password"
                 type="password"
@@ -50,10 +44,7 @@ class LoginPage extends React.Component {
                 InputProps={{
                   startAdornment: (
                     <InputAdornment position="start">
-                      <img
-                        style={{ marginTop: "1%" }}
-                        src="/static/assets/icons/PasswordIcon.png"
-                      />
+                      <img src="/static/assets/icons/PasswordIcon.png" />
                     </InputAdornment>
                   )
                 }}
@@ -61,13 +52,7 @@ class LoginPage extends React.Component {
             </Grid>
             <Grid item xs={12}>
               <Button
-                className={classes.logintext}
-                style={{
-                  borderRadius: "100px",
-                  margin: "auto",
-                  paddingLeft: "15%",
-                  paddingRight: "15%"
-                }}
+                className={classes.loginButton}
                 variant="contained"
                 color="primary"
               >

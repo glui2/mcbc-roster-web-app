@@ -13,10 +13,7 @@ class ProfilePage extends React.Component {
     return (
       <div className={classes.root}>
         <div>
-          <img
-            style={{ marginTop: "1%" }}
-            src="/static/assets/icons/ProfileIcon2x.png"
-          />
+          <img src="/static/assets/icons/ProfileIcon2x.png" />
         </div>
         <div className={classes.usernameBox}>
           <Typography style={{ color: "#E53232" }} variant="h2">
