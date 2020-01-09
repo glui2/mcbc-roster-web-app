@@ -3,34 +3,8 @@ import { makeStyles, useTheme, Typography } from "@material-ui/core";
 import MinistryIcon from "../components/MinistryIcon";
 import color from "@material-ui/core/colors/blueGrey";
 import { textAlign } from "@material-ui/system";
+import { profilePageStyles } from "../styling";
 import { withStyles } from "@material-ui/styles";
-
-const profileStyles = theme => ({
-  root: {
-    backgroundImage:
-      "url(" + "/static/assets/images/backgroundProfilePage.jpg" + ")",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    textAlign: "center",
-    display: "flex",
-    flexDirection: "column"
-  },
-  usernameBox: {
-    borderStyle: "solid",
-    borderColor: "#E53232",
-    margin: "auto",
-    marginTop: "3%",
-    marginBottom: "3%",
-    padding: "5%",
-    paddingLeft: "8%",
-    paddingRight: "8%"
-  },
-  ministries: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "center"
-  }
-});
 
 class ProfilePage extends React.Component {
   render() {
@@ -76,4 +50,4 @@ class ProfilePage extends React.Component {
   }
 }
 
-export default withStyles(profileStyles)(ProfilePage);
+export default withStyles(profilePageStyles)(ProfilePage);

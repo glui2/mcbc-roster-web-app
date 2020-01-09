@@ -1,3 +1,21 @@
+export const loginPageStyles = {
+  root: {
+    backgroundImage: "url(" + "/static/assets/images/backgroundLogin.png" + ")",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    textAlign: "center",
+    display: "flex",
+    flexDirection: "column"
+  },
+  logindiv: {
+    marginTop: "12%",
+    marginBottom: "13%"
+  },
+  logintext: {
+    width: "25%"
+  }
+};
+
 export const homePageStyles = {
   root: {
     backgroundImage:
@@ -24,20 +42,29 @@ export const homePageStyles = {
   }
 };
 
-export const loginPageStyles = {
+export const profilePageStyles = {
   root: {
-    backgroundImage: "url(" + "/static/assets/images/backgroundLogin.png" + ")",
+    backgroundImage:
+      "url(" + "/static/assets/images/backgroundProfilePage.jpg" + ")",
     backgroundSize: "cover",
     backgroundPosition: "center",
     textAlign: "center",
     display: "flex",
     flexDirection: "column"
   },
-  logindiv: {
-    marginTop: "12%",
-    marginBottom: "13%"
+  usernameBox: {
+    borderStyle: "solid",
+    borderColor: "#E53232",
+    margin: "auto",
+    marginTop: "3%",
+    marginBottom: "3%",
+    padding: "5%",
+    paddingLeft: "8%",
+    paddingRight: "8%"
   },
-  logintext: {
-    width: "25%"
+  ministries: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center"
   }
 };
