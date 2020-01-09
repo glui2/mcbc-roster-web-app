@@ -3,10 +3,8 @@ import { makeStyles, useTheme, Typography } from "@material-ui/core";
 import MinistryIcon from "../components/MinistryIcon";
 import color from "@material-ui/core/colors/blueGrey";
 import { textAlign } from "@material-ui/system";
-import { withStyles } from "@material-ui/styles";
 import { homePageStyles } from "../styling";
-
-const homeStyles = homePageStyles;
+import { withStyles } from "@material-ui/styles";
 
 class HomePage extends React.Component {
   // constructor(props) {
@@ -65,4 +63,4 @@ class HomePage extends React.Component {
   }
 }
 
-export default withStyles(homeStyles)(HomePage);
+export default withStyles(homePageStyles)(HomePage);

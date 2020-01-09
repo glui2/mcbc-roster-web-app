@@ -23,3 +23,21 @@ export const homePageStyles = {
     paddingRight: "8%"
   }
 };
+
+export const loginPageStyles = {
+  root: {
+    backgroundImage: "url(" + "/static/assets/images/backgroundLogin.png" + ")",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    textAlign: "center",
+    display: "flex",
+    flexDirection: "column"
+  },
+  logindiv: {
+    marginTop: "12%",
+    marginBottom: "13%"
+  },
+  logintext: {
+    width: "25%"
+  }
+};

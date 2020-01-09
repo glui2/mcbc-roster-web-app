@@ -1,28 +1,11 @@
 import React from "react";
 import { makeStyles, useTheme, Typography } from "@material-ui/core";
-import { withStyles } from "@material-ui/styles";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import InputAdornment from "@material-ui/core/InputAdornment";
 import Grid from "@material-ui/core/Grid";
-
-const loginStyles = theme => ({
-  root: {
-    backgroundImage: "url(" + "/static/assets/images/backgroundLogin.png" + ")",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    textAlign: "center",
-    display: "flex",
-    flexDirection: "column"
-  },
-  logindiv: {
-    marginTop: "12%",
-    marginBottom: "13%"
-  },
-  logintext: {
-    width: "25%"
-  }
-});
+import { loginPageStyles } from "../styling";
+import { withStyles } from "@material-ui/styles";
 
 class LoginPage extends React.Component {
   render() {
@@ -34,6 +17,7 @@ class LoginPage extends React.Component {
           <Grid container spacing={3}>
             <Grid item xs={12}>
               <img
+                style={{ marginTop: "1%" }}
                 src="/static/assets/icons/RosterIcon.png"
               />
             </Grid>
@@ -48,6 +32,7 @@ class LoginPage extends React.Component {
                   startAdornment: (
                     <InputAdornment position="start">
                       <img
+                        style={{ marginTop: "1%" }}
                         src="/static/assets/icons/ProfileIcon.png"
                       />
                     </InputAdornment>
@@ -66,6 +51,7 @@ class LoginPage extends React.Component {
                   startAdornment: (
                     <InputAdornment position="start">
                       <img
+                        style={{ marginTop: "1%" }}
                         src="/static/assets/icons/PasswordIcon.png"
                       />
                     </InputAdornment>
@@ -95,4 +81,4 @@ class LoginPage extends React.Component {
   }
 }
 
-export default withStyles(loginStyles)(LoginPage);
+export default withStyles(loginPageStyles)(LoginPage);
