@@ -18,7 +18,10 @@ class Ministry(models.Model):
     members = models.ManyToManyField(Volunteer)
 
     def __str__(self):
-        return self.name
+        return self.ministry_name
 
 class VolunteerAdmin(admin.ModelAdmin):
-    list_display = ('first_name', 'last_name', 'email')
+    list_display = ('first_name', 'last_name', 'email') 
+
+class MinistryAdmin(admin.ModelAdmin):
+    pass
