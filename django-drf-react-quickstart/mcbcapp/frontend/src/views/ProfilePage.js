@@ -3,34 +3,8 @@ import { makeStyles, useTheme, Typography } from "@material-ui/core";
 import MinistryIcon from "../components/MinistryIcon";
 import color from "@material-ui/core/colors/blueGrey";
 import { textAlign } from "@material-ui/system";
+import { profilePageStyles } from "../styles";
 import { withStyles } from "@material-ui/styles";
-
-const profileStyles = theme => ({
-  root: {
-    backgroundImage:
-      "url(" + "/static/assets/images/backgroundProfilePage.jpg" + ")",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    textAlign: "center",
-    display: "flex",
-    flexDirection: "column"
-  },
-  usernameBox: {
-    borderStyle: "solid",
-    borderColor: "#E53232",
-    margin: "auto",
-    marginTop: "3%",
-    marginBottom: "3%",
-    padding: "5%",
-    paddingLeft: "8%",
-    paddingRight: "8%"
-  },
-  ministries: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "center"
-  }
-});
 
 class ProfilePage extends React.Component {
   render() {
@@ -39,17 +13,14 @@ class ProfilePage extends React.Component {
     return (
       <div className={classes.root}>
         <div>
-          <img
-            style={{ marginTop: "1%" }}
-            src="/static/assets/icons/ProfileIcon2x.png"
-          />
+          <img src="/static/assets/icons/ProfileIcon2x.png" />
         </div>
         <div className={classes.usernameBox}>
-          <Typography style={{ color: "#E53232" }} variant="h2">
+          <Typography variant="h2">
             Chris <br /> Yeung
           </Typography>
         </div>
-        <Typography style={{ color: "#E53232" }} variant="h6">
+        <Typography className={classes.subheading} variant="h6">
           I AM SERVING IN
         </Typography>
         <div className={classes.ministries}>
@@ -76,4 +47,4 @@ class ProfilePage extends React.Component {
   }
 }
 
-export default withStyles(profileStyles)(ProfilePage);
+export default withStyles(profilePageStyles)(ProfilePage);

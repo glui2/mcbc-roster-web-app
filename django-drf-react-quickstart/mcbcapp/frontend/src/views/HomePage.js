@@ -3,33 +3,8 @@ import { makeStyles, useTheme, Typography } from "@material-ui/core";
 import MinistryIcon from "../components/MinistryIcon";
 import color from "@material-ui/core/colors/blueGrey";
 import { textAlign } from "@material-ui/system";
+import { homePageStyles } from "../styles";
 import { withStyles } from "@material-ui/styles";
-
-const homeStyles = theme => ({
-  root: {
-    backgroundImage:
-      "url(" + "/static/assets/images/backgroundHomePage1.jpg" + ")",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    textAlign: "center",
-    display: "flex",
-    flexDirection: "column"
-  },
-  layer: {
-    backgroundColor: "#32669d",
-    opacity: "70%",
-    width: "100%",
-    height: "100%"
-  },
-  textContainer: {
-    margin: "auto",
-    marginTop: "3%",
-    marginBottom: "3%",
-    padding: "5%",
-    paddingLeft: "8%",
-    paddingRight: "8%"
-  }
-});
 
 class HomePage extends React.Component {
   // constructor(props) {
@@ -53,32 +28,20 @@ class HomePage extends React.Component {
       <div className={classes.root}>
         <div className={classes.layer}>
           <div className={classes.textContainer}>
-            <Typography
-              style={{ color: "#FFFFFF", letterSpacing: "6px" }}
-              variant="h5"
-            >
+            <Typography className={classes.subheading} variant="h5">
               THIS UPCOMING SUNDAY
             </Typography>
-            <Typography
-              style={{ color: "#FFFFFF", margin: "2%", letterSpacing: "10px" }}
-              variant="h3"
-            >
+            <Typography className={classes.heading} variant="h3">
               Dec 22
             </Typography>
-            <Typography
-              style={{ color: "#FFFFFF", letterSpacing: "6px" }}
-              variant="h5"
-            >
+            <Typography className={classes.subheading} variant="h5">
               YOU ARE ROSTERED ON
             </Typography>
             <MinistryIcon
               imgsrc="/static/assets/icons/WorshipIcon_white.png"
               label=""
             />
-            <Typography
-              style={{ color: "#FFFFFF", letterSpacing: "10px" }}
-              variant="h3"
-            >
+            <Typography className={classes.heading} variant="h3">
               WORSHIP
             </Typography>
           </div>
@@ -88,4 +51,4 @@ class HomePage extends React.Component {
   }
 }
 
-export default withStyles(homeStyles)(HomePage);
+export default withStyles(homePageStyles)(HomePage);
