@@ -38,5 +38,8 @@ Heroku CLI:
 
 9. To access the admin site, navigate to http://127.0.0.1:8000/rostering/mcbcadmin and login
 
-10. Before committing, ensure you export data from Django with the following command in CLI:
+10. Before committing, ensure you export any updated data from Django with the following command in CLI:
     python manage.py dumpdata --indent=4 > mcbc_mockdata.json
+
+11. In order to upload new data, run the following command in CLI:
+    python manage.py loaddata < mcbc_mockdata.json
