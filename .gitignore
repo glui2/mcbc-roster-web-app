@@ -4,3 +4,9 @@ django-drf-react-quickstart/node_modules/
 Lib/
 
 django-drf-react-quickstart/mcbcapp/frontend/static/frontend/
+
+django-drf-react-quickstart/mcbcapp/frontend/__pycache__/
+
+django-drf-react-quickstart/mcbcapp/frontend/migrations/__pycache__/
+
+*.pyc
